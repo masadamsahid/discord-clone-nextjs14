@@ -5,6 +5,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { type ThemeProviderProps } from "next-themes/dist/types"
 
 import CreateServerModal from "@/_components/modals/create-server-modal";
+import InviteModal from "@/_components/modals/invite-modal";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
@@ -22,6 +23,7 @@ export const ModalProvider = () => {
   return (
     <>
       <CreateServerModal/>
+      <InviteModal/>
     </>
   );
 }
