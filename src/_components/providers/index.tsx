@@ -8,6 +8,7 @@ import CreateServerModal from "@/_components/modals/create-server-modal";
 import InviteModal from "@/_components/modals/invite-modal";
 import EditServerModal from "@/_components/modals/edit-server-modal";
 import MembersModal from "@/_components/modals/members-modal";
+import CreateChannelModal from "../modals/create-channel-modal";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
@@ -28,6 +29,7 @@ export const ModalProvider = () => {
       <InviteModal/>
       <EditServerModal/>
       <MembersModal/>
+      <CreateChannelModal/>
     </>
   );
 }
