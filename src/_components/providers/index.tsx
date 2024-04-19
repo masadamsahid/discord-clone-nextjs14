@@ -8,7 +8,9 @@ import CreateServerModal from "@/_components/modals/create-server-modal";
 import InviteModal from "@/_components/modals/invite-modal";
 import EditServerModal from "@/_components/modals/edit-server-modal";
 import MembersModal from "@/_components/modals/members-modal";
-import CreateChannelModal from "../modals/create-channel-modal";
+import CreateChannelModal from "@/_components/modals/create-channel-modal";
+import LeaveServerModal from "@/_components/modals/leave-server-modal";
+import DeleteServerModal from "@/_components/modals/delete-server-modal";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
@@ -30,6 +32,8 @@ export const ModalProvider = () => {
       <EditServerModal/>
       <MembersModal/>
       <CreateChannelModal/>
+      <LeaveServerModal/>
+      <DeleteServerModal/>
     </>
   );
 }
