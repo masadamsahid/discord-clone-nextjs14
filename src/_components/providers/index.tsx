@@ -11,6 +11,8 @@ import MembersModal from "@/_components/modals/members-modal";
 import CreateChannelModal from "@/_components/modals/create-channel-modal";
 import LeaveServerModal from "@/_components/modals/leave-server-modal";
 import DeleteServerModal from "@/_components/modals/delete-server-modal";
+import DeleteChannelModal from "@/_components/modals/delete-channel-modal";
+import EditChannelModal from "@/_components/modals/edit-channel-modal";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
@@ -34,6 +36,8 @@ export const ModalProvider = () => {
       <CreateChannelModal/>
       <LeaveServerModal/>
       <DeleteServerModal/>
+      <DeleteChannelModal/>
+      <EditChannelModal/>
     </>
   );
 }
