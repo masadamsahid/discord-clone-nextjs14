@@ -19,7 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
     if (!messageId) return res.status(400).json({ error: "Message ID missing" });
 
     const { content } = req.body;
-    if (!content) return res.status(400).json({ error: "Content missing" });
 
     const server = await db.server.findFirst({
       where: {
@@ -62,7 +61,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
 
     if (req.method === "DELETE") message = await db.message.update({
       where: { id: messageId as string },
-      data: { fileUrl: null, content: "This message has ben deleted.", deleted: true },
+      data: { fileUrl: null, content: "This message has been deleted.", deleted: true },
       include: {
         member: {
           include: { profile: true },
@@ -72,6 +71,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
 
     if (req.method === "PATCH") {
       if(!isMessageOwner) return res.status(401).json({ error: "Unauthorized" });
+      if (!content) return res.status(400).json({ error: "Content missing" });
       
       message = await db.message.update({
         where: { id: messageId as string },
