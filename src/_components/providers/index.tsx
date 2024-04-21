@@ -16,6 +16,7 @@ import DeleteServerModal from "@/_components/modals/delete-server-modal";
 import DeleteChannelModal from "@/_components/modals/delete-channel-modal";
 import EditChannelModal from "@/_components/modals/edit-channel-modal";
 import MessageFileModal from "@/_components/modals/message-file-modal";
+import DeleteMessageModal from "@/_components/modals/delete-message-modal";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
@@ -42,6 +43,7 @@ export const ModalProvider = () => {
       <DeleteChannelModal/>
       <EditChannelModal/>
       <MessageFileModal/>
+      <DeleteMessageModal/>
     </>
   );
 }

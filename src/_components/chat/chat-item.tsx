@@ -16,6 +16,7 @@ import ActionTooltip from "@/_components/action-tooltip";
 import { Form, FormControl, FormField, FormItem } from "@/_components/ui/form";
 import { Input } from "@/_components/ui/input";
 import { Button } from "@/_components/ui/button";
+import { useModal } from "@/hooks/use-modal-store";
 
 const roleIconMap = {
   [MemberRole.GUEST]: null,
@@ -44,7 +45,7 @@ type ChatItemProps = {
 
 const ChatItem = ({ id, content, member, timestamp, fileUrl, deleted, currentMember, isUpdated, socketUrl, socketQuery, ...props }: ChatItemProps) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
-  const [isDeleting, setIsDeleting] = useState<boolean>(false);
+  const { onOpen } = useModal();
   
   useEffect(() => {
     const handleKeyDown = (event: any) => {
@@ -204,7 +205,10 @@ const ChatItem = ({ id, content, member, timestamp, fileUrl, deleted, currentMem
             </ActionTooltip>
           )}
           <ActionTooltip label="Delete">
-            <Trash className="cursor-pointer ml-auto size-4 text-rose-500 hover:text-rose-600 dark:hover:text-rose-300 transition" />
+            <Trash
+              onClick={() => onOpen("deleteMessage", { apiUrl: `${socketUrl}/${id}`, query: socketQuery })}
+              className="cursor-pointer ml-auto size-4 text-rose-500 hover:text-rose-600 dark:hover:text-rose-300 transition"
+            />
           </ActionTooltip>
         </div>
       )}
