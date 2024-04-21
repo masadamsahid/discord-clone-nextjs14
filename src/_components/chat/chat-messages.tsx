@@ -8,6 +8,7 @@ import { format } from "date-fns";
 import ChatWelcome from "@/_components/chat/chat-welcome";
 import { useChatQuery } from "@/hooks/use-chat-query";
 import ChatItem from "@/_components/chat/chat-item";
+import { useChatSocket } from "@/hooks/use-chat-socket";
 
 
 const DATE_FORMAT = "d MMM yyyy, HH:mm";
@@ -35,10 +36,15 @@ type ChatMessagesProps = {
 const ChatMessages = ({ name, member, chatId, apiUrl, socketUrl, socketQuery, paramKey, paramValue, type, ...props }: ChatMessagesProps) => {
   
   const queryKey = `chat:${chatId}`;
+  const addKey = `chat:${chatId}:messages`;
+  const updateKey = `chat:${chatId}:messages:update`;
+  
   
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } = useChatQuery({
     queryKey, apiUrl, paramKey, paramValue
   });
+  
+  useChatSocket({ queryKey, addKey, updateKey });
   
   if(status === "loading") return (
     <div className="flex flex-col flex-1 justify-center items-center">
