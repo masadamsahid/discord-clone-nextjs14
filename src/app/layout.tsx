@@ -3,7 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-import { ModalProvider, SocketProvider, ThemeProvider } from "@/_components/providers";
+import { ModalProvider, QueryProvider, SocketProvider, ThemeProvider } from "@/_components/providers";
 import { cn } from "@/lib/utils";
 
 const font = Open_Sans({ subsets: ["latin"] });
@@ -30,7 +30,9 @@ export default function RootLayout({
           >
             <SocketProvider>
               <ModalProvider />
-              {children}
+              <QueryProvider>
+                {children}
+              </QueryProvider>
             </SocketProvider>
           </ThemeProvider>
         </body>

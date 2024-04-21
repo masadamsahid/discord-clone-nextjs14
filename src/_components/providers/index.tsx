@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { type ThemeProviderProps } from "next-themes/dist/types"
 import { io as ClientIO } from "socket.io-client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; 
 
 import CreateServerModal from "@/_components/modals/create-server-modal";
 import InviteModal from "@/_components/modals/invite-modal";
@@ -95,5 +96,19 @@ export const SocketProvider = ({ children, ...props }: SocketProviderProps) => {
   );
 }
 
+type QueryProviderProps = {
+  children: React.ReactNode;
+};
+
+export const QueryProvider = ({ children, ...props }: QueryProviderProps) => {
+  const [queryClient, setQueryClient] = useState(() => new QueryClient());
+  
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      {children}
+    </QueryClientProvider>
+  );
+}
 
 
