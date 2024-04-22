@@ -79,7 +79,7 @@ const ChatInput = ({ apiUrl, query, name, type, ...props }: ChatInputProps) => {
                   </div>
                 </div>
               </FormControl>
-              <FormMessage/>
+              {/* <FormMessage/> */}
             </FormItem>
           )}
         />
