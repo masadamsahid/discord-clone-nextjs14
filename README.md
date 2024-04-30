@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Discord Clone
 
-## Getting Started
+Techs:
+- React (Next.js)
+- Shadcn-UI
+- Tailwind CSS
+- Prisma
+- MySQL
+- Uploadthing (storing images and PDFs)
+- Socket.io (for realtime chat)
+- Livekit (for audio & video call)
 
-First, run the development server:
+## [Need a live demo? Contact me! 😉](https://masadamsahid.vercel.app/#about) 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Previews:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![discord-clone-preview-dekstop](https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/325e375d-1a54-416b-9b41-db7eca0a204f)
+![discord-clone-preview-dekstop-video-call](https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/064b6325-d16a-4398-bd0d-f9aeb997ee51)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<table>
+  <tr>
+    <td>
+      <img
+        title="discord-clone-preview-mobile"
+        src="https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/ffff0ca8-56f7-48a3-8466-c85a45e3e58f"
+        alt="discord-clone-preview-mobile"
+      >
+      <!-- ![discord-clone-preview-mobile](https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/ffff0ca8-56f7-48a3-8466-c85a45e3e58f) -->
+    </td>
+    <td>
+      <img
+        title="discord-clone-preview-mobile-with-server-sidenav"
+        src="https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/a2c22299-e3ae-4510-a340-b08a596d5ddd"
+        alt="discord-clone-preview-mobile-with-server-sidenav"
+      >
+      <!-- ![discord-clone-preview-mobile-with-server-sidenav](https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/a2c22299-e3ae-4510-a340-b08a596d5ddd) -->
+    </td>
+    <td>
+      <img
+        title="discord-clone-preview-mobile-video-call"
+        src="https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/c7d869fd-8f4e-4aa0-ac32-7c230da07610"
+        alt="discord-clone-preview-mobile-video-call"
+      >
+      <!-- ![discord-clone-preview-mobile-video-call](https://github.com/masadamsahid/discord-clone-nextjs14/assets/62916459/c7d869fd-8f4e-4aa0-ac32-7c230da07610) -->
+    </td>
+  </tr>
+</table>
