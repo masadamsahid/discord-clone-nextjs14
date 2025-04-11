@@ -1,5 +1,7 @@
 # Discord Clone
 
+[Need a live demo? Contact me! 😉](https://discord-clone.masadamsahid.my.id)
+
 Techs:
 - React (Next.js)
 - Shadcn-UI
@@ -9,8 +11,6 @@ Techs:
 - Uploadthing (storing images and PDFs)
 - Socket.io (for realtime chat)
 - Livekit (for audio & video call)
-
-## [Need a live demo? Contact me! 😉](https://masadamsahid.vercel.app/#about) 
 
 ## Previews:
 
