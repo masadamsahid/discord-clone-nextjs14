@@ -1,6 +1,6 @@
 # Discord Clone
 
-[Need a live demo? Contact me! 😉](https://discord-clone.masadamsahid.my.id)
+[Demo Link](https://discord-clone.masadamsahid.my.id)
 
 Techs:
 - React (Next.js)
